@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "gaming-backlog",
+    title: "Clearing the Backlog",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -14,6 +14,13 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    "gatsby-transformer-yaml",
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: ["Press Start 2P"],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -29,6 +36,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: "./src/data",
+      },
+      __key: "data",
     },
   ],
 };
